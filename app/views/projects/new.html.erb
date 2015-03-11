@@ -1,0 +1,14 @@
+<h1>Make New Project<h1>
+
+<%= form_for @project do |p| %>
+
+	<p>
+	<%= p.label :name %> <br>
+	<%= p.text_field :name %>
+	</p>
+
+	<p>#insert authenticated user data here</p>
+	
+	<%= p.submit %> 
+
+<%end%>

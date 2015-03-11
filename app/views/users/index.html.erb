@@ -1,0 +1,11 @@
+<% @user.each do |user| %>
+	<p>
+		<%= link_to 'Name', user_path(user) %>: <%= user.name %><br>
+		About: <%= user.about %> <br>
+		Email: <%= user.email %> <br>
+
+		
+
+	</p>
+
+<% end %>

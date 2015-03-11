@@ -1,0 +1,13 @@
+<h2>View all projects</h2>
+
+<% @project.each do |p| %>
+	<p>
+		<%= link_to 'Name', project_path(p) %>: <%= p.name %><br>
+		About: <%= p.description %> <br>
+		status: <%= p.status %> <br>
+
+		
+
+	</p>
+
+<% end %>

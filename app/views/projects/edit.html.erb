@@ -1,0 +1,16 @@
+<%= form_for @project do |p| %>
+
+	<p>
+	<%= p.label :name %> <br>
+	<%= p.text_field :name %>
+	</p>
+
+	<p>
+	<%= p.label :description %> <br>
+	<%= p.text_area :description %>
+	</p>
+
+
+	<%= p.submit %> 
+
+<%end%>

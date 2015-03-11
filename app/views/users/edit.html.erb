@@ -1,0 +1,20 @@
+<%= form_for @user do |u| %>
+
+	<p>
+	<%= u.label :name %> <br>
+	<%= u.text_field :name %>
+	</p>
+
+	<p>
+	<%= u.label :about %> <br>
+	<%= u.text_area :about %>
+	</p>
+
+	<p>
+	<%= u.label :email %> <br>
+	<%= u.text_field :email %>
+	</p>
+	
+	<%= u.submit %> 
+
+<%end%>
