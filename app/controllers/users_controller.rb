@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+
+	#test
 	#This action will direct to the index view that may show a list of all users
 	def index
 		@user = User.all
