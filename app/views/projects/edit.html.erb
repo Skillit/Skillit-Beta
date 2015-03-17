@@ -10,7 +10,20 @@
 	<%= p.text_area :description %>
 	</p>
 
+	
 
-	<%= p.submit %> 
+	<p><h2>Add listing:</h2></p>
+	<% if !@skill.blank? %>
+		<% for item in @skill %>
+			<%= item.id %>
+			<%= link_to item.name, listings_path(:project_id => @project.id, :skill_id => item.id)  %>
+			<br>
+		<% end %>
+	<% end %>
+
+	<p> Have a Skill you don't see here?
+		<%= link_to "Add one", new_skill_path %>
+
+	<p><%= p.submit %> </p>
 
 <%end%>

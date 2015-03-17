@@ -6,9 +6,9 @@ Rails.application.routes.draw do
     resources :users 
 
     resources :projects
-
-    #resources :skill
-
+    resources :listings
+    
+    resources :skills 
   # Example resource route with options:
   #   resources :products do
   #     member do

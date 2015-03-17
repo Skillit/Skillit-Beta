@@ -29,6 +29,14 @@ class ProjectsController < ApplicationController
 	#This will lead to the slightly altered show/new page of the project. Filled from data passed in.
 	def edit
 		@project = Project.find(params[:id])
+		@skill = Skill.all
+
+		@projlistings = Listing.where("project_id = ?", params[:id])
+		#	@projlistings
+		#else
+
+		#end
+
 	end
 
 	#update is to edit, what create was for new. Run after edit. No view
