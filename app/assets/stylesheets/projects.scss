@@ -1,3 +1,86 @@
-// Place all the styles related to the projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+    font-family: Arial, Verdana, sans-serif;
+    color: #665544;
+}
+
+h1 {
+    font-size: 14pt;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#content {
+    
+}
+
+#logo {
+    float: left;
+    width: 15%;
+    background-color: #D3D3D3;
+    padding: 0.5em 0em;
+}
+#searchbar {
+   float: left;
+    width: 85%;
+    background-color: #FFFA8F;
+    padding: 0.5em 0em; 
+}
+
+.box {
+    height: auto;
+    margin-bottom: 10px;    
+}
+
+.column-half-1 {
+    width: 50%;
+    float: left;;
+    margin-right: 0%;
+    background-color: #EDEBDB;
+}
+
+img {
+    width: 99%;
+}
+
+.column-quarter-1, .column-quarter-4 {
+    width: 25%;
+    float: left;
+    background-color: #FCFBE9;
+}
+
+.column-quarter-4 {
+    margin-right: 0%;
+}
+
+.column-two-thirds-1 {
+    width: 64.6%;
+    float: left;
+    margin: 1%;
+    margin-right: 0%;
+    background-color: #9CFFB6;
+}
+
+.column-third-3 {
+    width: 32.8%;
+    float: left;
+    margin: 1%;
+    margin-right: 0%;
+    background-color: #9CFFB6;
+}
+ 
+#button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-style:solid;
+    border-width: thick;
+    border-color:#3F0340;
+    background-color:#846CD9
+            }
+.column-full {
+    width: 100%;
+    float: left;
+    margin: 1%;
+}
