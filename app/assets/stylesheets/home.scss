@@ -12,7 +12,7 @@ body {
 }
 
 .header {
-	background: #CCFFFF;
+	background:rgba(213,218,228,.9);
 	width: 100%; 
 	top: 0;
 	position: fixed; 
@@ -44,19 +44,19 @@ SEARCH FORM
 
 
 .search {
-  background:#f4f4f4;
+  /*background:#f4f4f4;
   background:rgba(244,244,244,.79);
-  border: 1px solid #d3d3d3;
-	left: 50%;
+  border: 1px solid #d3d3d3;*/
+	left: 45%;
   padding: 2px 5px;
   position: absolute;
 
 	margin: -22px 0 0 -200px;
-	top: 70%;
+	top: 63%;
   width:339px;
-  box-shadow:0 4px 9px rgba(0,0,0,.37);
+  /*box-shadow:0 4px 9px rgba(0,0,0,.37);
   -moz-box-shadow:0 4px 9px rgba(0,0,0,.37);
-  -webkit-box-shadow:0 4px 9px rgba(0,0,0,.37);
+  -webkit-box-shadow:0 4px 9px rgba(0,0,0,.37);*/
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px
@@ -140,11 +140,11 @@ li {
 	margin-left: 15px;
 	padding-top: 15px;
 }
-
+/*For home, projects, my profile, settings */
 .nav {
 	position: fixed;
-	top: 30px;
-	right: 5px;
+	top: 10px;
+	right: 15px;
 
 }
 
