@@ -1,10 +1,43 @@
-* {
-    font-family: Arial, Verdana, sans-serif;
-    color: #665544;
+* 
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+    width: 960px;
+    margin: 0 auto;
 }
+
+.header {
+    background:rgba(213,218,228,.9);
+    width: 100%; 
+    top: 0;
+    position: fixed; 
+
+    }
+
+.logo {
+    
+    margin: 5px;
+    padding: 5px;
+    height: auto;
+    width: auto;
+    float: left;
+ 
+}
+
 
 h1 {
     font-size: 14pt;
+}
+h2 {
+    font-size: 14pt;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 12pt
 }
 
 body {
@@ -18,15 +51,20 @@ body {
 
 #logo {
     float: left;
-    width: 15%;
+    width: 10%;
     background-color: #D3D3D3;
-    padding: 0.5em 0em;
+}
+#logo img {
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+    display: block;
 }
 #searchbar {
    float: left;
-    width: 85%;
+    height: 100px;
+    width: 90%;
     background-color: #FFFA8F;
-    padding: 0.5em 0em; 
 }
 
 .box {
@@ -36,9 +74,34 @@ body {
 
 .column-half-1 {
     width: 50%;
-    float: left;;
+    float: left;
     margin-right: 0%;
     background-color: #EDEBDB;
+}
+#SkillsNeeded {
+    width: 100%;
+    float: left;
+    margin-right: 0%;
+    background-color: #EDEBDB;
+}
+#skillsNeeded2 {
+    width: 20%;
+    float: left;
+    margin-right: 0%;
+    background-color: #EDEBDB;
+}
+#skills {
+    width: 75%;
+    float: left;
+    margin-right: 0%;
+    background-color: #EDEBDB;
+}
+
+.skillsbox{
+    width: 45%;
+    float: center;
+    margin-right: 0%;
+    background-color: blue;
 }
 
 img {
@@ -62,7 +125,18 @@ img {
     margin-right: 0%;
     background-color: #9CFFB6;
 }
-
+#connectedMembers{
+    float: left;
+    margin: 1%;
+    margin-right: 0%;
+    background-color:#9CFFB6;
+    
+}
+#connectedMembers img{
+    margin: 5%;
+    width: 23%;
+    
+}
 .column-third-3 {
     width: 32.8%;
     float: left;
@@ -74,7 +148,7 @@ img {
 #button{
     margin-top: 20px;
     margin-bottom: 20px;
-    border-style:solid;
+    border-style: solid;
     border-width: thick;
     border-color:#3F0340;
     background-color:#846CD9

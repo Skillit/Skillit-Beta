@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
 <html>
 
     <head>
 
         <meta charset="UTF-8">
 
-<<<<<<< Updated upstream
         <link href="skillfish_layout.css" type="text/css" rel="stylesheet" />
-=======
-        <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />-->
->>>>>>> Stashed changes
 
         <title>Projects: Skillfish</title>
 
@@ -24,13 +22,33 @@
 
         <!-- Header Section - - - - - - - - - - - - - - - - - - - -->
 
-        <div id="nav">
+        <div class = "header">
+        <div class ="container">
 
-            <div id="logo"><h1>Logo</h1></div>
+            <div class ="logo">
+                <%=image_tag('skillit-logo.png') %>              
+               
+            </div>
 
-            <div id="searchbar"><h1>Search</h1></div>
+                <div class ="search">
+                    <form action=""> 
+                    <input type="text" id="search" placeholder="Search Skill, Project, or Name.."/>
+                    <button type="submit" id ="submit">Search</button> 
+                    </form>
+                </div>
 
+
+                    <div class="nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><%= link_to 'Projects', projects_path %> </li>
+                        <li><%= link_to 'New Project', new_project_path %></li>
+                        <li><%= link_to 'All Users', users_path %> </li>
+                        <li><a href="#">LogOut</a></li>
+                    </ul>   
+                    </div>
         </div>
+    </div>
 
         
 
@@ -39,8 +57,6 @@
         <!-- 1/4 + 1/2 + 1/4 length -->
 
             <div class="box column-quarter-1">
-
-                <p>Column One</p>
 
             </div>
 
@@ -52,7 +68,13 @@
 
             <h1><%= @project.name %></h1>
 
-            <%= image_path("Puppy_2.jpg")  %>
+            <img src="http://lorempixel.com/400/200/sports/1/" />
+
+            <div id="SkillsNeeded">
+
+                <div id = "skillsNeeded2"><h1>Skills Needed:</h1></div>
+
+                <div id = "skills"><p>-Male Actor -Gaffer - Music Composer -Script Supervisor</p></div></div>
 
         </div>
 
@@ -74,13 +96,21 @@
 
                 <div id="content_upper1">
 
-                <p>Summary</p>
+                <p><strong>Short Description:</strong></p>
 
                 </div>
 
                 <div id="content_lower1">
 
-                <p>More content</p>
+               <p> <%= @project.description %> </p>
+
+                </div>
+
+            <div id= "content_lower2">
+
+                <h1><u>Connected Members</u></h1>
+
+                <div id = "connectedMembers"><img src = "Sally%20Fresh-a-demon.jpg" width = "50"><img src = "Sally%20Fresh-a-demon.jpg" width = "50"><img src = "Sally%20Fresh-a-demon.jpg" width = "50"></div>
 
                 </div>
 
@@ -90,19 +120,34 @@
 
                 <div id="content_upper2">
 
-                <p>Picture</p>
+                <img src= "Sally%20Fresh-a-demon.jpg">
+
+                <h2>Sally Freshman</h2>
+
+                <h3>Page Admin</h3>
 
                 </div>
 
                 <div id="content_lower2">
-<<<<<<< Updated upstream
-=======
-                    <div id = "button">
-                        <p>Contact Admin</p>
-                    </div>
->>>>>>> Stashed changes
 
-                <p>More content</p>
+                <div id = "button">
+
+                   <p>Contact Admin</p> 
+
+                    </div>
+
+                <div id = "button">
+
+                    <p>Share This Page</p>
+
+                    </div>
+
+                <div id = "button">
+
+                    <p><%= link_to "Edit This Page", edit_project_path(@project) %>
+</p>
+
+                    </div>
 
                 </div>
 
@@ -114,8 +159,6 @@
 
             <div class="box column-quarter-4">
 
-                <p>Column Three</p>
-
             </div>
 
         
@@ -126,12 +169,9 @@
 
     </body>
 
-<p> <b><%= @project.name %> </b><br>
- <p> <%= @project.description %> </p>
 
-<p><%= link_to "Edit", edit_project_path(@project) %>
-</p>
-<%= link_to "Back", projects_path %> 
+
+</html>
 
 
 </html>
