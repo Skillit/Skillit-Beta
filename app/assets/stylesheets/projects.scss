@@ -77,12 +77,15 @@ body {
     width: 50%;
     float: left;
     margin-right: 0%;
-    background-color: #EDEBDB;
+    background-color: rgba(213,218,228,.9);
 }
 #SkillsNeeded {
     width: 100%;
     float: left;
     margin-right: 0%;
+    border-style: solid;
+    border-color: black;
+    border-top: none;
     background-color: #EDEBDB;
 }
 #skillsNeeded2 {
@@ -128,9 +131,13 @@ img {
 }
 #connectedMembers{
     float: left;
-    margin: 1%;
+    margin: 0%;
     margin-right: 0%;
     background-color:#9CFFB6;
+    border-style: solid;
+    border-color: black;
+    border-left: none;
+    border-right: none;
     
 }
 #connectedMembers img{
@@ -144,6 +151,15 @@ img {
     margin: 1%;
     margin-right: 0%;
     background-color: #9CFFB6;
+}
+
+#pageAdmin {
+    margin: 1%;
+    margin-right: 0%;
+    background-color: #9CFFB6;
+    border-style: solid;
+    border-color: black;
+    border-top: none;
 }
  
 #button{
