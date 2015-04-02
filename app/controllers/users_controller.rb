@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+	before_action :authenticate_user!
 
 	#test
 	#This action will direct to the index view that may show a list of all users
