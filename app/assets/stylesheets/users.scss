@@ -17,7 +17,7 @@ header {
     text-align: center;
     color: #fff;
     background-color: #928E8E;
-    background-image: url("cover.jpg");
+    background-image: url("/assets/cover.jpg");
     background-repeat: repeat-x;
 
 
@@ -32,6 +32,7 @@ header .container {
 header img {
     display: block;
     margin: 0 auto 20px;
+    width: 25%;
 }
 
 
@@ -139,6 +140,7 @@ filter: alpha(opacity=30);
 }
 
 #contact img {
+  padding-left: 10px;
   width:150px;
   height:150px;
   border:0;
@@ -166,7 +168,7 @@ input {
 
 label {
   display: block;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 button {
@@ -189,7 +191,7 @@ button:hover, button:active, button:focus {
   /* basics */
   background-color: #3498db;
   color: #C4BE92;
-    text-align: center;
+  text-align: center;
 
   /* rounded corners */
     -webkit-border-radius: 12px;

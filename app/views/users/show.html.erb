@@ -32,7 +32,7 @@ function vouch(val) {
         <div class="container">
            
                
-                    <img src="SallyFreshademon.jpeg">
+                    <%=image_tag('SallyFreshademon.jpeg')%> 
                     <div class="intro-text">
                         <span class="name">Sally Freshman</span>
                         <hr>
@@ -47,8 +47,10 @@ function vouch(val) {
 
  <!-- Skill Grid Section -->
     <section id="skills">
+    	<div class="container">
                     <h2>Skills</h2>
                     <hr>
+        <div>
 <table>
 <tr>
 <td>
@@ -99,8 +101,8 @@ function vouch(val) {
             
                     <h2>Projects</h2>
                     <hr>
-                </div>
-            </div>
+      
+            
 
     <table>
     <tr>
@@ -153,6 +155,7 @@ function vouch(val) {
     </td>
     </tr>
     </table>
+</div>
     </section>
 
 <!-- Contact -->
@@ -161,15 +164,15 @@ function vouch(val) {
             <h2> Contact Me </h2>
             <hr>
             <a href="http://www.facebook.com">
-              <img src="facebook.png" alt="Facebook" hspace "20" \>
+                <%=image_tag('facebook.png')%> 
             </a> 
 
             <a href="http://www.twitter.com">
-              <img src="twitter.png" alt="Twitter" hspace="20" \>
+             <%=image_tag('twitter.png')%>
             </a> 
 
             <a href="http://www.linkedin.com">
-              <img src="linkedin.png" alt="LinkedIn" \>
+              <%=image_tag('linkedin.png')%>
             </a> 
 
 
