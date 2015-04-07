@@ -4,7 +4,6 @@ Rails.application.routes.draw do
    root 'home#index'
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-    resources :users 
 
     resources :projects
     resources :listings
