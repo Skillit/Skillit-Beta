@@ -91,6 +91,8 @@ body {
     border-color: black;
     border-top: none;
     background-color: rgba(213,218,228,.9);
+    -moz-border-radius-bottomright: 10px 10px;
+    -moz-border-radius-bottomleft: 10px 10px;
 }
 #skillsNeeded2 {
     width: 20%;
