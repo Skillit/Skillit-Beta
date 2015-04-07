@@ -13,6 +13,7 @@
     width: 100%; 
     top: 0;
     position: fixed; 
+    box-shadow: 0px 0px 20px #888;
 
     }
 
@@ -74,8 +75,10 @@ body {
 }
 
 .column-half-1 {
+    box-shadow: 0px 0px 20px #888;
     padding-top: 80px;
     width: 50%;
+    min-width: 600px;
     float: left;
     margin-right: 0%;
     background-color: rgba(213,218,228,.9);
@@ -114,6 +117,7 @@ img {
 
 .column-quarter-1, .column-quarter-4 {
     width: 25%;
+    min-width: 10%;
     float: left;
     background-color: #FFFFFF;
 }
@@ -124,6 +128,7 @@ img {
 
 .column-two-thirds-1 {
     width: 64.6%;
+    min-width: 32.3%;
     float: left;
     margin: 1%;
     margin-right: 0%;
@@ -147,6 +152,7 @@ img {
 }
 .column-third-3 {
     width: 32.8%;
+    min-width: 16.4%;
     float: left;
     margin: 1%;
     margin-right: 0%;

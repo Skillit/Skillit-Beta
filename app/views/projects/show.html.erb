@@ -7,8 +7,11 @@
     <head>
 
         <meta charset="UTF-8">
-
         <link href="skillfish_layout.css" type="text/css" rel="stylesheet" />
+
+        <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />--!>
+=======
+        <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />-->
 
         <title>Projects: Skillfish</title>
 
@@ -76,6 +79,7 @@
 
                 <div id = "skills"><p>-Male Actor -Gaffer - Music Composer -Script Supervisor</p></div></div>
 
+
         </div>
 
         
@@ -111,7 +115,13 @@
                 <h1><u>Connected Members</u></h1>
 
                 <div id = "connectedMembers"><%=image_tag('SallyFreshademon.jpeg')%> <%=image_tag('SallyFreshademon.jpeg')%> <%=image_tag('SallyFreshademon.jpeg')%> </div>
+=======
+                <p> <%= @project.description %> </p>
 
+                </div>
+                <div id = "content_lower3">
+                    <h1><u>Connected Members</u></h1>
+                    <p>Profile Pictures</p>
                 </div>
 
             </div>
@@ -174,6 +184,7 @@
 
 
 </html>
+<%= link_to "Back", projects_path %> 
 
 
 </html>
