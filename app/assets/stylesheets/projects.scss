@@ -82,6 +82,8 @@ body {
     float: left;
     margin-right: 0%;
     background-color: rgba(213,218,228,.9);
+    border-bottom-right-radius: 10px 10px;
+    border-bottom-left-radius: 10px 10px;
 }
 #SkillsNeeded {
     width: 100%;
@@ -91,8 +93,6 @@ body {
     border-color: black;
     border-top: none;
     background-color: rgba(213,218,228,.9);
-    -moz-border-radius-bottomright: 10px 10px;
-    -moz-border-radius-bottomleft: 10px 10px;
 }
 #skillsNeeded2 {
     width: 20%;
