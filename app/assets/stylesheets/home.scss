@@ -1,3 +1,193 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	width: 100%;
+	margin: auto;
+}
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.header {
+	background:rgba(213,218,228,.9);
+	width: 100%; 
+	top: 0;
+	position: fixed; 
+
+	}
+
+.logo {
+	
+	margin: 5px;
+    padding: 5px;
+    height: auto;
+    width: auto;
+    float: left;
+ 
+}
+
+
+/*--------------------------------------------------------------
+SEARCH FORM
+--------------------------------------------------------------*/
+
+*,*:after,*:before {
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+
+
+
+
+.search {
+  /*background:#f4f4f4;
+  background:rgba(244,244,244,.79);
+  border: 1px solid #d3d3d3;*/
+	left: 45%;
+  padding: 2px 5px;
+  position: absolute;
+
+	margin: -22px 0 0 -200px;
+	top: 63%;
+  width:339px;
+  /*box-shadow:0 4px 9px rgba(0,0,0,.37);
+  -moz-box-shadow:0 4px 9px rgba(0,0,0,.37);
+  -webkit-box-shadow:0 4px 9px rgba(0,0,0,.37);*/
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px
+}
+
+.search input, .search button {
+	float: left;
+}
+.search input {
+	background:#fefefe;
+	border: none;
+	font:12px/12px 'HelveticaNeue', Helvetica, Arial, sans-serif;
+	margin-right: 5px;
+	padding: 10px;
+	width: 216px;
+	box-shadow: 0 0 4px rgba(0,0,0,.4) inset, 1px 1px 1px rgba(255,255,255,.75);
+	-moz-box-shadow: 0 0 4px rgba(0,0,0,.4) inset, 1px 1px 1px rgba(255,255,255,.75);
+	-webkit-box-shadow: 0 0 4px rgba(0,0,0,.4) inset, 1px 1px 1px rgba(255,255,255,.75);
+  border-radius: 9px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px
+}
+	.search input:focus {
+		outline: none;
+		box-shadow:0 0 4px #0d76be inset;
+		-moz-box-shadow:0 0 4px #0d76be inset;
+		-webkit-box-shadow:0 0 4px #0d76be inset;
+	}
+	.search input::-webkit-input-placeholder {
+  	font-style: italic;
+  	line-height: 15px
+	}
+
+	.search input:-moz-placeholder {
+	  font-style: italic;
+  	line-height: 15px
+	}
+
+.search button {
+	background: rgb(52,173,236);
+	background: -moz-linear-gradient(top, rgba(52,173,236,1) 0%, rgba(38,145,220,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(52,173,236,1)), color-stop(100%,rgba(38,145,220,1)));
+	background: -webkit-linear-gradient(top, rgba(52,173,236,1) 0%,rgba(38,145,220,1) 100%);
+	background: -o-linear-gradient(top, rgba(52,173,236,1) 0%,rgba(38,145,220,1) 100%);
+	background: -ms-linear-gradient(top, rgba(52,173,236,1) 0%,rgba(38,145,220,1) 100%);
+	background: linear-gradient(to bottom, rgba(52,173,236,1) 0%,rgba(38,145,220,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34adec', endColorstr='#2691dc',GradientType=0 );
+	border: none;
+	color:#fff;
+	cursor: pointer;
+	font: 13px/13px 'HelveticaNeue', Helvetica, Arial, sans-serif;
+	padding: 10px;
+	width:106px;
+	box-shadow: 0 0 2px #2692dd inset;
+	-moz-box-shadow: 0 0 2px #2692dd inset;
+	-webkit-box-shadow: 0 0 2px #2692dd inset;
+  border-radius: 9px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+}
+	.search button:hover {
+		opacity:.9;
+	}
+
+
+
+/* --------------------------------End of Search--------------------------------- */
+
+
+
+
+
+a {
+	text-decoration: none;
+
+}
+
+li {
+	list-style: none;
+	float: left;
+	margin-left: 15px;
+	padding-top: 15px;
+}
+/*For home, projects, my profile, settings */
+.nav {
+	position: fixed;
+	top: 10px;
+	right: 15px;
+
+}
+
+
+.nav li {
+	background: rgb(52,173,236);
+	background: -moz-linear-gradient(top, rgba(52,173,236,1) 0%, rgba(38,145,220,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(52,173,236,1)), color-stop(100%,rgba(38,145,220,1)));
+	background: -webkit-linear-gradient(top, rgba(52,173,236,1) 0%,rgba(38,145,220,1) 100%);
+	background: -o-linear-gradient(top, rgba(52,173,236,1) 0%,rgba(38,145,220,1) 100%);
+	background: -ms-linear-gradient(top, rgba(52,173,236,1) 0%,rgba(38,145,220,1) 100%);
+	background: linear-gradient(to bottom, rgba(52,173,236,1) 0%,rgba(38,145,220,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34adec', endColorstr='#2691dc',GradientType=0 );
+	border: none;
+	color:#fff;
+	cursor: pointer;
+	font: 13px/13px 'HelveticaNeue', Helvetica, Arial, sans-serif;
+	padding: 10px;
+	width:106px;
+	box-shadow: 0 0 2px #2692dd inset;
+	-moz-box-shadow: 0 0 2px #2692dd inset;
+	-webkit-box-shadow: 0 0 2px #2692dd inset;
+  border-radius: 9px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+}
+
+.nav li:hover {
+		opacity:.9;
+		
+	}
+
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+
+}
+ 
+
+ 
+
+.content {
+	padding-top: 80px;
+}
