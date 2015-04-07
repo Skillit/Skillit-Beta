@@ -9,3 +9,178 @@
 	</p>
 
 <% end %>
+
+<html>
+
+      <link rel="stylesheet" type="text/css" href="profileCSS.css">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+
+    <!-- Header -->
+
+    <header>
+<script>
+function vouch(val) {
+    var qty = document.getElementById('qty').value;
+    var new_qty = parseInt(qty,10) + val;
+    
+    if (new_qty < 0) {
+        new_qty = 0;
+    }
+    
+    document.getElementById('qty').value = new_qty;
+    return new_qty;
+}
+</script>
+
+        <div class="container">
+           
+               
+                    <img src="SallyFreshademon.jpeg">
+                    <div class="intro-text">
+                        <span class="name">Sally Freshman</span>
+                        <hr>
+                        <p> Short description, Major/Year/Job? etc........ </p>
+                    </div>
+                
+           
+        </div>
+    </header>
+<body>
+<center>
+
+ <!-- Skill Grid Section -->
+    <section id="skills">
+                    <h2>Skills</h2>
+                    <hr>
+<table>
+<tr>
+<td>
+    <div class="box">    
+        <label for="qty"><abbr title="Quantity">Photoshop</abbr></label>
+        <input id="qty" value="0" />
+
+        <button id="up" onclick="vouch(1)">Vouch</button>
+    </div>
+</td>
+
+<td>
+    <div class="box">    
+        <label for="qty"><abbr title="Quantity">Acting</abbr></label>
+        <input id="qty" value="0" />
+
+        <button id="up" onclick="vouch(1)">Vouch</button>
+    </div>
+</td>
+
+<td>
+    <div class="box">    
+        <label for="qty"><abbr title="Quantity">Singing</abbr></label>
+        <input id="qty" value="0" />
+
+        <button id="up" onclick="vouch(1)">Vouch</button>
+    </div>
+</td>
+
+</tr>
+</table>
+    
+ <!--                 <span class="skillBtn"> Photoshop </span>
+                     <span class="skillBtn"> Singing </span>
+                     <span class="skillBtn"> Acting </span>
+-->
+
+
+    </section>
+
+
+
+
+    <!-- projects section -->
+
+    <section id="projects">
+        <div class="container">
+            
+                    <h2>Projects</h2>
+                    <hr>
+                </div>
+            </div>
+
+    <table>
+    <tr>
+    <td>               
+     <div class="project-list">
+
+        <a href="#" class="projects-link">
+            <img src="http://placehold.it/350x150" alt="">
+             </a>
+    </div>
+    </td>
+    <td>
+     <div class="project-list">
+            <a href="#" class="projects-link">
+            <img src="http://placehold.it/350x150" alt="">
+            </a>
+    </div>
+    </td>
+    <td>
+       <div class="project-list">
+                    <a href="#" class="projects-link">
+                        <img src="http://placehold.it/350x150" alt="">
+                    </a>
+        </div> 
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <div class="project-list">
+        <a href="#" class="projects-link">
+            <img src="http://placehold.it/350x150" alt="">
+        </a>
+    </div>
+    </td>
+    <td>
+
+<div class="project-list">
+    <a href="#" class="projects-link">
+        <img src="http://placehold.it/350x150" alt="">
+    </a>
+</div> 
+    </td>
+    <td>
+                        
+    <div class="project-list">
+        <a href="#" class="projects-link">
+        <img src="http://placehold.it/350x150" alt="">
+        </a>
+    </div>     
+    </td>
+    </tr>
+    </table>
+    </section>
+
+<!-- Contact -->
+        <section id="contact">
+            <div class="containter">
+            <h2> Contact Me </h2>
+            <hr>
+            <a href="http://www.facebook.com">
+              <img src="facebook.png" alt="Facebook" hspace "20" \>
+            </a> 
+
+            <a href="http://www.twitter.com">
+              <img src="twitter.png" alt="Twitter" hspace="20" \>
+            </a> 
+
+            <a href="http://www.linkedin.com">
+              <img src="linkedin.png" alt="LinkedIn" \>
+            </a> 
+
+
+            </div>
+        </section>
+
+
+
+   
+ </body>   
+</html>
