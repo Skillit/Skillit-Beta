@@ -6,6 +6,7 @@
 .container {
     width: 960px;
     margin: 0 auto;
+<<<<<<< HEAD
 }
 
 .header {
@@ -26,6 +27,28 @@
  
 }
 
+=======
+}
+
+.header {
+    background:rgba(213,218,228,.9);
+    width: 100%; 
+    top: 0;
+    position: fixed; 
+
+    }
+
+.logo {
+    
+    margin: 5px;
+    padding: 5px;
+    height: auto;
+    width: auto;
+    float: left;
+ 
+}
+
+>>>>>>> master
 
 h1 {
     font-size: 14pt;
@@ -43,6 +66,7 @@ h3 {
 body {
     width: 100%;
     margin: 0 auto;
+    background-color: #EAEAEA;
 }
 
 #content {
@@ -85,11 +109,37 @@ asdasdasdasd
 #SkillsNeeded {
     width: 100%;
     float: left;
+<<<<<<< HEAD
     margin-right: 0%;
     border-style: solid;
     border-color: black;
     border-top: none;
     background-color: #EDEBDB;
+=======
+    margin-right: 0%;
+    border-style: solid;
+    border-color: black;
+    border-top: none;
+    background-color: rgba(213,218,228,.9);
+}
+#skillsNeeded2 {
+    width: 20%;
+    float: left;
+    margin-right: 0%;
+    background-color: rgba(213,218,228,.9);
+}
+#skills {
+    width: 75%;
+    float: left;
+    margin-right: 0%;
+    background-color: rgba(213,218,228,.9);
+}
+
+.skillsbox{
+    width: 45%;
+    float: center;
+    margin-right: 0%;
+>>>>>>> master
 }
 #skillsNeeded2 {
     width: 20%;
@@ -118,7 +168,7 @@ img {
 .column-quarter-1, .column-quarter-4 {
     width: 25%;
     float: left;
-    background-color: #FCFBE9;
+    background-color: #FFFFFF;
 }
 
 .column-quarter-4 {
@@ -130,8 +180,25 @@ img {
     float: left;
     margin: 1%;
     margin-right: 0%;
-    background-color: #9CFFB6;
+    background-color: rgba(213,218,228,.9);
 }
+#connectedMembers{
+    float: left;
+    margin: 0%;
+    margin-right: 0%;
+    background-color:rgba(213,218,228,.9);
+    border-style: solid;
+    border-color: black;
+    border-left: none;
+    border-right: none;
+    
+}
+#connectedMembers img{
+    margin: 2%;
+    width: 23%;
+    
+}
+<<<<<<< HEAD
 #connectedMembers{
     float: left;
     margin: 0%;
@@ -148,12 +215,23 @@ img {
     width: 23%;
     
 }
+=======
+>>>>>>> master
 .column-third-3 {
     width: 32.8%;
     float: left;
     margin: 1%;
     margin-right: 0%;
-    background-color: #9CFFB6;
+    background-color: rgba(213,218,228,.9);
+}
+
+#pageAdmin {
+    margin: 1%;
+    margin-right: 0%;
+    background-color: rgba(213,218,228,.9);
+    border-style: solid;
+    border-color: black;
+    border-top: none;
 }
 
 #pageAdmin {
@@ -166,13 +244,38 @@ img {
 }
  
 #button{
+    text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+<<<<<<< HEAD
     border-style: solid;
     border-width: thick;
     border-color:#3F0340;
     background-color:#846CD9
             }
+=======
+    background: rgb(52,173,236);
+    background: -moz-linear-gradient(top, rgba(52,173,236,1) 0%, rgba(38,145,220,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(52,173,236,1)), color-stop(100%,rgba(38,145,220,1)));
+    background: -webkit-linear-gradient(top, rgba(52,173,236,1) 0%,rgba(38,145,220,1) 100%);
+    background: -o-linear-gradient(top, rgba(52,173,236,1) 0%,rgba(38,145,220,1) 100%);
+    background: -ms-linear-gradient(top, rgba(52,173,236,1) 0%,rgba(38,145,220,1) 100%);
+    background: linear-gradient(to bottom, rgba(52,173,236,1) 0%,rgba(38,145,220,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34adec', endColorstr='#2691dc',GradientType=0 );
+    border: none;
+    color:#fff;
+    cursor: pointer;
+    font: 13px/13px 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    padding: 2px;
+    width:188px;
+    box-shadow: 0 0 2px #2692dd inset;
+    -moz-box-shadow: 0 0 2px #2692dd inset;
+    -webkit-box-shadow: 0 0 2px #2692dd inset;
+  border-radius: 9px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+}
+>>>>>>> master
 .column-full {
     width: 100%;
     float: left;
