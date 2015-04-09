@@ -1,13 +1,90 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <link href="skillfish_layout.css" type="text/css" rel="stylesheet" />
+
+        <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />--!>
+=======
+        <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />-->
+
+        <title>Projects: Skillfish</title>
+
+    </head>
+
+
+
+    <body>
+
+
+
+        <!-- Header Section - - - - - - - - - - - - - - - - - - - -->
+
+        <div class = "header">
+        <div class ="container">
+
+            <div class ="logo">
+                <%=image_tag('skillit-logo.png') %>              
+               
+            </div>
+
+                <div class ="search">
+                    <form action=""> 
+                    <input type="text" id="search" placeholder="Search Skill, Project, or Name.."/>
+                    <button type="submit" id ="submit">Search</button> 
+                    </form>
+                </div>
+
+
+                    <div class="nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><%= link_to "Projects", projects_path %>  </li>
+                        <li><%= link_to 'New Project', new_project_path %></li>
+                        <li><a href="#">LogOut</a></li>
+                    </ul>   
+                    </div>
+        </div>
+    </div>
+
+        
+
+    <div id="content">
+
+        <!-- 1/4 + 1/2 + 1/4 length -->
+
+            <div class="box column-quarter-1">
+
+            </div>
+
+            <div class="box column-half-1">
+
+ <!-- all content is found in this div -->
+
+            <div id="header">
+
+
 <h2>View all projects</h2>
 
 <% @project.each do |p| %>
 	<p>
-		<%= link_to 'Name', project_path(p) %>: <%= p.name %><br>
-		About: <%= p.description %> <br>
-		status: <%= p.status %> <br>
+		<center><%= link_to 'Name', project_path(p) %>: <%= p.name %><br></center>
+		<center>About: <%= p.description %> <br></center>
+		<center>status: <%= p.status %> <br></center>
 
 		
 
 	</p>
 
 <% end %>
+</div>
+
+<div class = "box column-quarter-4">
+</div>
+</body>
+</html>
