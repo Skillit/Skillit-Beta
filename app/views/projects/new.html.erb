@@ -1,13 +1,84 @@
-<h1>Make New Project<h1>
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <link href="skillfish_layout.css" type="text/css" rel="stylesheet" />
+
+        <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />--!>
+=======
+        <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />-->
+
+        <title>Edit a Project: Skillfish</title>
+
+    </head>
+
+
+
+    <body>
+
+
+
+        <!-- Header Section - - - - - - - - - - - - - - - - - - - -->
+
+        <div class = "header">
+        <div class ="container">
+
+            <div class ="logo">
+                <%=image_tag('skillit-logo.png') %>              
+               
+            </div>
+
+                <div class ="search">
+                    <form action=""> 
+                    <input type="text" id="search" placeholder="Search Skill, Project, or Name.."/>
+                    <button type="submit" id ="submit">Search</button> 
+                    </form>
+                </div>
+
+
+                    <div class="nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><%= link_to 'Projects', projects_path %> </li>
+                        <li><%= link_to 'New Project', new_project_path %></li>
+                        <li> </li>
+                        <li><a href="#">LogOut</a></li>
+                    </ul>   
+                    </div>
+        </div>
+    </div>
+
+        
+
+    <div id="content">
+
+        <!-- 1/4 + 1/2 + 1/4 length -->
+
+            <div class="box column-quarter-1">
+
+            </div>
+
+            <div class="box column-half-1">
+
+ <!-- all content is found in this div -->
+
+            <div id="header">
+
+<center><h1>Make New Project<h1></center>
 
 <%= form_for @project do |p| %>
 
 	<p>
-	<%= p.label :name %> <br>
-	<%= p.text_field :name %>
+	<center><strong><%= p.label :name %> <br></strong></center>
+	<center><%= p.text_field :name %></center>
 	</p>
 
-	<p>#insert authenticated user data here</p>
+	<center><p>#insert authenticated user data here</p></center>
 
 
 	<p>
@@ -15,8 +86,12 @@
 	</p>
 
 	
-	<%= p.submit %> 
+	<center><%= p.submit %> </center>
 
 <%end%>
 
-asda
+</div>
+<div class = "box column-quarter-4">
+</div>
+</body>
+</html>
