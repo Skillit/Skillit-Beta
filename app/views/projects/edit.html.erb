@@ -1,13 +1,85 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <link href="skillfish_layout.css" type="text/css" rel="stylesheet" />
+
+        <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />--!>
+=======
+        <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />-->
+
+        <title>Edit a Project: Skillfish</title>
+
+    </head>
+
+
+
+    <body>
+
+
+
+        <!-- Header Section - - - - - - - - - - - - - - - - - - - -->
+
+        <div class = "header">
+        <div class ="container">
+
+            <div class ="logo">
+                <%=image_tag('skillit-logo.png') %>              
+               
+            </div>
+
+                <div class ="search">
+                    <form action=""> 
+                    <input type="text" id="search" placeholder="Search Skill, Project, or Name.."/>
+                    <button type="submit" id ="submit">Search</button> 
+                    </form>
+                </div>
+
+
+                    <div class="nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><%= link_to 'Projects', projects_path %> </li>
+                        <li><%= link_to 'New Project', new_project_path %></li>
+                        <li> </li>
+                        <li><a href="#">LogOut</a></li>
+                    </ul>   
+                    </div>
+        </div>
+    </div>
+
+        
+
+    <div id="content">
+
+        <!-- 1/4 + 1/2 + 1/4 length -->
+
+            <div class="box column-quarter-1">
+
+            </div>
+
+            <div class="box column-half-1">
+
+ <!-- all content is found in this div -->
+
+            <div id="header">
+
+
 <%= form_for @project do |p| %>
 
 	<p>
-	<%= p.label :name %> <br>
-	<%= p.text_field :name %>
+	<center><strong><%= p.label :name %></strong> <br></center>
+	<center><%= p.text_field :name %></center>
 	</p>
 
 	<p>
-	<%= p.label :description %> <br>
-	<%= p.text_area :description %>
+	<center><strong><%= p.label :description %> </strong> <br></center>
+	<center><%= p.text_area :description %></center>
 	</p>
 
 	
@@ -15,15 +87,20 @@
 	<p><h2>Add listing:</h2></p>
 	<% if !@skill.blank? %>
 		<% for item in @skill %>
-			<%= item.id %>
-			<%= link_to item.name, listings_path(:project_id => @project.id, :skill_id => item.id)  %>
+			<center><%= item.id %>
+			<%= link_to item.name, listings_path(:project_id => @project.id, :skill_id => item.id)  %></center>
 			<br>
 		<% end %>
 	<% end %>
 
-	<p> Have a Skill you don't see here?
-		<%= link_to "Add one", new_skill_path %>
+	<p><center> Have a Skill you don't see here?
+		<%= link_to "Add one", new_skill_path %></center>
 
-	<p><%= p.submit %> </p>
+	<p><center><%= p.submit %></center </p>
 
 <%end%>
+</div>
+<div class = "box column-quarter-4">
+</div>
+</body>
+</html>
