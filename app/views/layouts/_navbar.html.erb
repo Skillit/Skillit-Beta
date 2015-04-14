@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<div class = "header">
+            <div class ="container">
+                <div class ="logo">
+                <%=image_tag('skillit-logo.png') %>              
+                </div>
+
+                <div class ="search">
+                    <form action=""> 
+                    <input type="text" id="search" placeholder="Search Skill, Project, or Name.."/>
+                    <button type="submit" id ="submit">Search</button> 
+                    </form>
+                </div>
+
+
+                <div class="nav">
+                    <ul>
+                        <li><%= link_to "Your Profile", projects_path %></li>
+                        <li><%= link_to 'New Project', new_project_path %></li>
+                        <li><a href="http://google.com">Settings</a></li>
+                    </ul>   
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
