@@ -149,7 +149,16 @@ li {
 	position: fixed;
 	top: 10px;
 	right: 15px;
+	min-width: 600px;
 
+}
+.nav select{
+	display: none;
+}
+
+@media (max-width: 960px){
+	nav ul {display: none; }
+	nav select { display: inline-block;}
 }
 
 
@@ -174,6 +183,7 @@ li {
   border-radius: 9px;
   -moz-border-radius: 9px;
   -webkit-border-radius: 9px;
+  mind-width: 600px;
 }
 
 .nav li:hover {
@@ -186,6 +196,7 @@ li {
   text-decoration: none;
   color: #fff;
   display: block;
+  min-width: 600px;
 
 }
  
