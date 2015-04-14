@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="Navbar.scss">
 </head>
 <body>
 
 <div class = "header">
             <div class ="container">
+                
                 <div class ="logo">
-                <%=image_tag('skillit-logo.png') %>              
+                    <%= link_to image_tag('skillit-logo.png'), projects_path %>          
                 </div>
 
                 <div class ="search">
