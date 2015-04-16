@@ -1,11 +1,49 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <link href="skillfish_layout.css" type="text/css" rel="stylesheet" />
+
+        <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />--!>
+=======
+        <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />-->
+
+        <title>Setting: Skillit</title>
+
+    </head>
+
+
+
+    <body>
+        <!-- Header Section - - - - - - - - - - - - - - - - - - - -->
+
+    <%= render "layouts/navbar" %> 
+
+    <div id="content">
+
+        <!-- 1/4 + 1/2 + 1/4 length -->
+
+            <div class="box column-quarter-1">
+
+            </div>
+
+            <div class="box column-half-1">
+
+ <!-- all content is found in this div -->
+
+            <div id="header">
+<h2>Settings</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <center><%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %></center>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -13,27 +51,34 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <br></br>
+    <center><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.password_field :password, autocomplete: "off" %></center>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <br></br>
+   <center> <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %> </center>
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
+    <br></br>
+    <center><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.password_field :current_password, autocomplete: "off" %></center>
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <br></br>
+    <center><%= f.submit "Update" %> </center>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
+<h3>Unhappy?</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+<p><center> <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></center></p>
+</div>
+<div class = "box column-quarter-4">
+</div>
+</body>
+</html>
