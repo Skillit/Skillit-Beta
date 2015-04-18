@@ -1,10 +1,10 @@
 <html>
 
-      
+     
             <!-- Collect the nav links, forms, and other content for toggling -->
 
     <!-- Header -->
-
+<%= stylesheet_link_tag "users" %>
     <header>
 <script>
 function vouch(val) {
@@ -18,12 +18,36 @@ function vouch(val) {
     document.getElementById('qty').value = new_qty;
     return new_qty;
 }
+
+function vouch1(val1) {
+    var qty1 = document.getElementById('qty1').value;
+    var new_qty1 = parseInt(qty1,10) + val1;
+    
+    if (new_qty1 < 0) {
+        new_qty1 = 0;
+    }
+    
+    document.getElementById('qty1').value = new_qty1;
+    return new_qty1;
+}
+
+function vouch2(val2) {
+    var qty2 = document.getElementById('qty2').value;
+    var new_qty2 = parseInt(qty2,10) + val2;
+    
+    if (new_qty2 < 0) {
+        new_qty2 = 0;
+    }
+    
+    document.getElementById('qty2').value = new_qty2;
+    return new_qty2;
+}
 </script>
 
         <div class="container">
            
                
-                    <%=image_tag('SallyFreshademon.jpeg')%> 
+                    <%=image_tag('SallyFreshademon.jpeg')%>
                     <div class="intro-text">
                         <span class="name">Sally Freshman</span>
                         <hr>
@@ -37,11 +61,9 @@ function vouch(val) {
 <center>
 
  <!-- Skill Grid Section -->
-    <section id="skills">
-    	<div class="container">
-                    <h2>Skills</h2>
+    <section id="skillz">
+                    <h2>skills</h2>
                     <hr>
-        <div>
 <table>
 <tr>
 <td>
@@ -55,19 +77,19 @@ function vouch(val) {
 
 <td>
     <div class="box">    
-        <label for="qty"><abbr title="Quantity">Acting</abbr></label>
-        <input id="qty" value="0" />
+        <label for="qty1"><abbr title="Quantity1">Acting</abbr></label>
+        <input id="qty1" value="0" />
 
-        <button id="up" onclick="vouch(1)">Vouch</button>
+        <button id="up" onclick="vouch1(1)">Vouch</button>
     </div>
 </td>
 
 <td>
     <div class="box">    
-        <label for="qty"><abbr title="Quantity">Singing</abbr></label>
-        <input id="qty" value="0" />
+        <label for="qty2"><abbr title="Quantity2">Singing</abbr></label>
+        <input id="qty2" value="0" />
 
-        <button id="up" onclick="vouch(1)">Vouch</button>
+        <button id="up" onclick="vouch2(1)">Vouch</button>
     </div>
 </td>
 
@@ -92,8 +114,8 @@ function vouch(val) {
             
                     <h2>Projects</h2>
                     <hr>
-      
-            
+                </div>
+            </div>
 
     <table>
     <tr>
@@ -146,7 +168,6 @@ function vouch(val) {
     </td>
     </tr>
     </table>
-</div>
     </section>
 
 <!-- Contact -->
@@ -155,15 +176,16 @@ function vouch(val) {
             <h2> Contact Me </h2>
             <hr>
             <a href="http://www.facebook.com">
-                <%=image_tag('facebook.png')%> 
+<%=image_tag('facebook.png')%>
             </a> 
 
             <a href="http://www.twitter.com">
-             <%=image_tag('twitter.png')%>
+                <%=image_tag('twitter.png')%>
+
             </a> 
 
             <a href="http://www.linkedin.com">
-              <%=image_tag('linkedin.png')%>
+<%=image_tag('linkedin.png')%>
             </a> 
 
 

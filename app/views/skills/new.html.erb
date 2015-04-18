@@ -1,0 +1,19 @@
+<h2>View All Skills</h2>
+<%= form_for @skill do |p| %>
+
+	<p>
+	<%= p.label :name %> <br>
+	<%= p.text_field :name %>
+	</p>
+
+	<p>#insert authenticated user data here</p>
+
+
+	<p>
+	<h2>Skills needed:</h2>
+	</p>
+
+	
+	<%= p.submit %> 
+
+<%end%>
