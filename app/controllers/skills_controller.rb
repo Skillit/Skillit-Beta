@@ -20,6 +20,7 @@ class SkillsController < ApplicationController
 
 	#Run when user enters a skill that is not in the db. No view. Done autonatically (somehow)
 	def new
+		@skill = Skill.new
 	end
 
 	def create

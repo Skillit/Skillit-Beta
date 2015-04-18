@@ -5,11 +5,15 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
     devise_for :users, controllers: {sessions: 'users/sessions', registrations: 'users/registrations'}
+    resources :users, only: [:show, :index]
+
 
     resources :projects
-    resources :listings
+    #resources :listings
     
     resources :skills 
+
+    
   # Example resource route with options:
   #   resources :products do
   #     member do
