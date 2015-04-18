@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'home#index'
 
+    get 'welcome', to: 'home#landing'
   # Example resource route (maps HTTP verbs to controller actions automatically):
     devise_for :users, controllers: {sessions: 'users/sessions', registrations: 'users/registrations'}
     resources :users, only: [:show, :index]
