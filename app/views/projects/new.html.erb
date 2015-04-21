@@ -5,59 +5,58 @@
 <html>
 
     <head>
-<%= stylesheet_link_tag "projects" %>
+        <%= stylesheet_link_tag "projects" %>
         <meta charset="UTF-8">
-
         <title>Edit a Project: Skillfish</title>
-
     </head>
-
-
 
     <body>
 
-    <%= render "layouts/navbar" %>
+        <%= render "layouts/navbar" %>
 
         <!-- Header Section - - - - - - - - - - - - - - - - - - - -->
 
 
-    <div id="content">
+        <div id="content">
 
-        <!-- 1/4 + 1/2 + 1/4 length -->
+            <!-- 1/4 + 1/2 + 1/4 length -->
 
             <div class="box column-quarter-1">
-
             </div>
 
             <div class="box column-half-1">
 
- <!-- all content is found in this div -->
+            <!-- all content is found in this div -->
 
             <div id="header">
 
-<h1>Make New Project<h1></center>
+                <h1>Make New Project<h1></center>
 
-<%= form_for @project do |p| %>
+                <%= form_for @project do |p| %>
 
-	<p>
-	<center><strong><%= p.label :name %> <br></strong></center>
-	<center><%= p.text_field :name %></center>
-	</p>
+            	<p>
+            	<center><strong><%= p.label :name %> <br></strong></center>
+            	<center><%= p.text_field :name %></center>
+            	</p>
 
-	<center><p>#insert authenticated user data here</p></center>
+            	<center><p>#insert authenticated user data here</p></center>
 
 
-	<p>
-	<h2>Skills needed:</h2>
-	</p>
+            	<p>
+            	<h2>Skills needed:</h2>
+            	</p>
 
-	
-	<center><%= p.submit %> </center>
+            	
+            	<center><%= p.submit %> </center>
 
-<%end%>
+                <%end%>
+            </div>
 
-</div>
-<div class = "box column-quarter-4">
-</div>
+            <div class = "box column-quarter-4">
+            </div>
+
 </body>
+
+<%= render "layouts/footer" %>
+
 </html>
