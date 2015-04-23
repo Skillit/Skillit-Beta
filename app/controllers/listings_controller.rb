@@ -1,11 +1,11 @@
 class ListingsController < ApplicationController
 
-	def indexs
+	def index
 		@listing = Listing.new
 		@listing.project_id = params[:project_id]
 		@listing.skill_id = params[:skill_id]
 		@listing.save
-		redirect_to edit_project_path(@listing.project_id) 
+		redirect_to edit_project_path(params[:id]) 
 	end
 
 

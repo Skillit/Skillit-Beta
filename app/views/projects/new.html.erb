@@ -30,7 +30,7 @@
 
             <div id="header">
 
-                <h1>Make New Project<h1></center>
+                <center><h1>Make New Project<h1></center>
 
                 <%= form_for @project do |p| %>
 
@@ -39,11 +39,42 @@
             	<center><%= p.text_field :name %></center>
             	</p>
 
-            	<center><p>#insert authenticated user data here</p></center>
+                <p>
+                <center><strong><%= p.label :description %> <br></strong></center>
+                <center><%= p.text_area :description %></center>
+                </p>
+
+            	<center><strong>Start project as <%= current_user.first_name %></p></center>
 
 
             	<p>
+
+                <!-- SKILLS ENTRY PARTIALIZE -->  
             	<h2>Skills needed:</h2>
+                <br></br>
+                <center>MY SKILLS:</center>
+                 <% if !@listings.blank? %>
+                    <% for item in @listings %>
+                      <center><%= item.skill_id %></center>
+                      <br>
+                    <% end %>
+                  <% end %>
+
+
+
+
+                  <br></br>
+                  <center>ADD SKILLS:</center>
+
+                  <% if !@skill.blank? %>
+                    <% for item in @skill %>
+                        <center><%= item.id %>
+                        <%= link_to item.name, listings_path(:project_id => @project.id, :skill_id => item.id)  %></center>
+                        <br>
+                    <% end %>
+                  <% end %>
+
+
             	</p>
 
             	

@@ -92,6 +92,15 @@ function vouch2(val2) {
     </div>
 </td>
 
+<br></br>
+  <center>MY SKILLS:</center>
+  <% if !@talents.blank? %>
+    <% for item in @talents %>
+      <center><%= item.skill_id %></center>
+      <br>
+    <% end %>
+  <% end %>
+
 </tr>
 </table>
     

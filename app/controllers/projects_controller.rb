@@ -13,6 +13,7 @@ class ProjectsController < ApplicationController
 	#This will lead to the view for the New project page
 	def new
 		@project = Project.new
+		@skill = Skill.all
 	end
 
 	#This action will be performed when the user hits submit at New project. No view to go with.
