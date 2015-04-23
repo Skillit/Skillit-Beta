@@ -1,3 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+<%= stylesheet_link_tag "projects" %>
+    <head>
+
+        <meta charset="UTF-8">
+        <link href="skillfish_layout.css" type="text/css" rel="stylesheet" />
+
+        <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />--!>
+=======
+        <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />-->
+
+        <title>Setting: Skillit</title>
+
+    </head>
+
+
+
+    <body>
+        <!-- Header Section - - - - - - - - - - - - - - - - - - - -->
+
+    <%= render "layouts/navbar" %> 
+
+    <div id="content">
+
+        <!-- 1/4 + 1/2 + 1/4 length -->
+
+            <div class="box column-quarter-1">
+
+            </div>
+
+            <div class="box column-half-1">
+
+ <!-- all content is found in this div -->
+
+            <div id="header">
 <h2>Change your password</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
@@ -20,3 +57,8 @@
 <% end %>
 
 <%= render "users/shared/links" %>
+</div>
+<div class = "box column-quarter-4">
+</div>
+</body>
+</html>
