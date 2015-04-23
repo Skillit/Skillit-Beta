@@ -1,0 +1,188 @@
+@charset "UTF-8";
+/* CSS Document */
+/*body {background-color: #eaeaea;}*/
+
+html { 
+  background: url(BG.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#left {
+	float: left;
+	width: 20%;
+	margin: 0;
+	padding: 1em;
+}
+
+#right {
+	float: right;
+	width: 20%;
+	margin: 0;
+	padding: 1em;
+}
+
+.content {
+	margin-left: 20%;
+	margin-right: 20%;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-bottom-right-radius: 10px;
+  	-moz-border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding: 1em;
+	max-width: 70%;
+	height: 500px;
+	background-color: rgba(213,221,230,.8);
+	box-shadow: 0px 0px 20px #9C9C9C;
+}
+
+IMG.logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+}
+
+IMG.logo:hover {
+	content:url(img/Skillit-hover.png)
+}
+
+h1 {
+	color: #343434;
+	font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+	font-size: 3em;
+	font-weight: 100;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+h2 {
+	color: #343434;
+	font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+	font-size: 2em;
+	font-weight: 100;
+	font-style: italic;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+h3 {
+	color: #343434;
+	font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	font-weight: 100;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.enter {
+	display: block;
+}
+
+
+.signup {
+	margin-left: 25%;
+	margin-right: 25%;
+	-webkit-border-radius: 10;
+	-moz-border-radius: 10;
+	border-radius: 10px;
+	width: 50%;
+	height: 50px;
+	font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+	font-weight: lighter;
+	color: #ffffff;
+	font-size: 30px;
+	background: #7cc576;
+	padding-bottom: 10px;
+	padding-bottom: 5px;
+	text-align: center;
+	line-height: 60px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.signup:hover {
+	background: #75b763;
+}
+
+a.action:link {
+    color: #FFFFFF;
+	text-decoration: none;
+}
+
+/* visited link */
+a.action:visited {
+    color: #FFFFFF;
+}
+
+/* mouse over link */
+a.action:hover {
+    color: #FFF;
+}
+
+/* selected link */
+a.action:active {
+    color: #d5dde6;
+}
+
+.Login {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.firstname{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.textbox {
+	background-color: rgba(213,221,230,0);
+	color: black;
+	margin: 1em;
+	font-size: 2em;
+	border-width: 0px 0px 1px 0px;
+	border-color: black;
+	outline: 0;
+	height: 35px;
+	width: 250px;
+	margin-left: 30%;
+}
+
+.email-textbox {
+	background-color: rgba(213,221,230,0);
+	color: black;
+	margin: 1em;
+	font-size: 2em;
+	border-width: 0px 0px 1px 0px;
+	border-color: black;
+	outline: 0;
+	height: 35px;
+	width: 350px;
+	margin-left: 27%;
+}
+
+.button {
+	position: fixed;
+	right: 5px;
+	top:30px;
+
+
+}
+#firstName,#lastName,#email,#password{
+    height: 600px;
+    width: 300px;
+
+}
+

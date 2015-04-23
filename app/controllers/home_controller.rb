@@ -5,6 +5,6 @@ class HomeController < ApplicationController
 	end
 
 	def landing
-		render "landingpg"
+		render "LandingPage"
 	end
 end
