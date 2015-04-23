@@ -56,6 +56,11 @@
     <%= f.email_field :email, autofocus: true %></center>
   </div>
 
+  <div class="field">
+    <center><%= f.label :about %><br />
+    <%= f.text_area :about %></center>
+  </div>
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
