@@ -30,7 +30,7 @@
 
             <div id="header">
 
-                <h1>Make New Project<h1></center>
+                <center><h1>Make New Project<h1></center>
 
                 <%= form_for @project do |p| %>
 
@@ -38,6 +38,11 @@
             	<center><strong><%= p.label :name %> <br></strong></center>
             	<center><%= p.text_field :name %></center>
             	</p>
+
+                <p>
+    <center><strong><%= p.label :description %> </strong> <br></center>
+    <center><%= p.text_area :description %></center>
+    </p>
 
             	<center><p>#insert authenticated user data here</p></center>
 

@@ -41,26 +41,23 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
+  <br></br>
+
   <div class="field">
-<<<<<<< Updated upstream
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %> 
+   <center> <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %> </center>
   </div>
 
 
   <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %> 
+    <center><%= f.label :last_name %><br />
+    <%= f.text_field :last_name %> </center>
   </div>
 
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-=======
     <center><%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %></center>
->>>>>>> Stashed changes
   </div>
 
   <div class="field">
