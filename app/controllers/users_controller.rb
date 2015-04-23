@@ -9,6 +9,9 @@ class UsersController < ApplicationController
 
 	#This will lead to the view for a single users page (VERY IMPORTANT)
 	def show
+
+		@talents = Talent.where("user_id = ?", params[:id]) 
+
 		@user = User.find(params[:id])
 	end
 

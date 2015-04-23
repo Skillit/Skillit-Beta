@@ -1,40 +1,14 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
+<h2>Sign up</h2>
 
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-<%= stylesheet_link_tag "LandingPage" %>
-<title>Skillit</title>
-</head>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
 
-<body>
-<div class="content">
-  <h1>Welcome!</h1>
-    <h3>We just have a few quick questions...</h3>
-    <br>
-    <h2 class="firstname">For starters, what's your first name?</h2>
-  
-      <input class="textbox"type="text" required>
-      <button type="submit" class="pure-button pure-button-primary"><a href="#lastname">Next</button> </a>
-
-</div>
-
-
-<br>
-<br>
-<div class="content">
-  <div id="lastname">
-  <h1>Nice to meet you, firstname.</h1>
-    <br>
-    <h2>What's your last name?</h2>
-
-      <input class="textbox"type="text" required>
-      <button type="submit" class="pure-button pure-button-primary"> <a href="#email">Next</button> </a>
-
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %> 
   </div>
-</div>
 
+<<<<<<< HEAD
 <br>
 <br>
 <center>
@@ -47,27 +21,34 @@
 
       <input class="email-textbox" type="email" required>
       <button type="submit" class="pure-button pure-button-primary"><a href="#password">Next</button> </a>
-
+=======
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %> 
   </div>
-</div>
+>>>>>>> parent of 544ae9c... LandingPage
 
-<br>
-<br>
-
-<div class="content">
-  <div id="password">
-  <h1>...one last thing</h1>
-    <br>
-  <br>
-
-      <input class="email-textbox" type="password" placeholder="Password" required>
-        <input class="email-textbox" type="password" placeholder="Confirm password" required>
-      <button type="submit" class="pure-button pure-button-primary"> <a href= "signup_end.html">Next</button> </a>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
   </div>
-</div>
 
-<br>
-<br>
-</body>
-</html>
+  <div class="field">
+    <%= f.label :password %>
+    <% if @validatable %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
 <%= render "users/shared/links" %>

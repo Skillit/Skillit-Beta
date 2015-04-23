@@ -13,15 +13,22 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # GET /resource/edit
-  #def edit
-  #  @user = User.find(params[:id])
+  def edit
+    @skill = Skill.all
 
-  #end
+    @talents = Talent.where("user_id = ?", params[:user_id]) 
+
+  end
 
   # PUT /resource
-  # def update
-  #   super
-  # end
+  def update
+    
+    if @user.update(configure_account_update_params)
+      redirect_to @user
+    else
+      render 'edit'
+    end
+  end
 
   # DELETE /resource
   # def destroy
@@ -45,9 +52,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # You can put the params you want to permit in the empty array.
-  # def configure_account_update_params
-  #   devise_parameter_sanitizer.for(:account_update) << :attribute
-  # end
+   private
+   def configure_account_update_params
+     devise_parameter_sanitizer.for(:account_update) << :attribute
+     params.require(:user).permit(:first_name, :last_name, :about, :email, :password, :password_confirmation) 
+   end
+
+
 
   # The path used after sign up.
   # def after_sign_up_path_for(resource)
@@ -58,4 +69,5 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+  
 end

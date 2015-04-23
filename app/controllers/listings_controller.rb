@@ -1,6 +1,6 @@
 class ListingsController < ApplicationController
 
-	def index
+	def indexs
 		@listing = Listing.new
 		@listing.project_id = params[:project_id]
 		@listing.skill_id = params[:skill_id]

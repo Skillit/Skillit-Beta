@@ -1,6 +1,6 @@
 <% @user.each do |user| %>
 	<p>
-		<%= link_to 'Name', user_path(user) %>: <%= user.name %><br>
+		<%= link_to 'Name', user_path(user) %>: <%= user.first_name %> <%= user.last_name %><br>
 		About: <%= user.about %> <br>
 		Email: <%= user.email %> <br>
 

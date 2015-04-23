@@ -9,10 +9,13 @@ Rails.application.routes.draw do
     resources :users, only: [:show, :index]
 
 
+
     resources :projects
-    #resources :listings
     
     resources :skills 
+
+    resources :listings, only: [:index]
+    resources :talents, only: [:index]
 
     
   # Example resource route with options:

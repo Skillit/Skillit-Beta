@@ -28,7 +28,6 @@ Rails.application.config.assets.precompile += %w( talents.css )
 
 Rails.application.config.assets.precompile += %w( users.css )
 
-Rails.application.config.assets.precompile += %w( LandingPage.css )
 
 
 

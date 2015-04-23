@@ -20,16 +20,28 @@
                 </div>
 
 
-                <div class="nav">
-                    <ul>
-                        <li><%= link_to "Profile", current_user %></li>
-                        <li><%= link_to 'New Project', new_project_path %></li>
-                        <li><%= link_to "Settings", edit_user_registration_path%></li>
-                        <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
+                <% if !user_signed_in? %>
+                    <div class="nav">
+                        <ul>
+                            
+                            <li><%= link_to 'New Project', new_project_path %></li>
+                            <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+                            <li><%= link_to 'Log In', new_user_session_path %></li>
+                        </ul> 
+                    </div>
 
-                    </ul> 
- 
-                </div>
+                <% elsif %>
+                    <div class="nav">
+                        <ul>
+                            <li><%= link_to "Profile", current_user %></li>
+                            <li><%= link_to 'New Project', new_project_path %></li>
+                            <li><%= link_to "Settings", edit_user_registration_path%></li>
+                            <li><%= link_to 'Logout', destroy_user_session_path, :method => 'delete' %></li>
+                        </ul> 
+                    </div>
+
+                <% end %>
+
             </div>
         </div>
 
