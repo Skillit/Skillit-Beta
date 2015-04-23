@@ -9,10 +9,9 @@ class UsersController < ApplicationController
 
 	#This will lead to the view for a single users page (VERY IMPORTANT)
 	def show
-
+		#@user = User.find(params[:id])
+		@user = User.find(current_user)
 		@talents = Talent.where("user_id = ?", params[:id]) 
-
-		@user = User.find(params[:id])
 	end
 
 	#defines user_params which will be passed back and forth. Has parameters, name, about and email so far.
