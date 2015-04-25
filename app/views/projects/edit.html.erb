@@ -21,57 +21,40 @@
 
     <body>
         <!-- Header Section - - - - - - - - - - - - - - - - - - - -->
+	    <%= render "layouts/navbar" %> 
+	    <div id="content">
+	        <!-- 1/4 + 1/2 + 1/4 length -->
+	        <div class="box column-quarter-1">
+	        </div>
+	        <div class="box column-half-1">
+				<!-- all content is found in this div -->
+	        	<div id="header">
+					<%= form_for @project do |p| %>
+						<p>
+						<center><strong><%= p.label :name %></strong> <br></center>
+						<center><%= p.text_field :name %></center>
+						</p>
 
-    <%= render "layouts/navbar" %> 
+						<p>
+						<center><strong><%= p.label :description %> </strong> <br></center>
+						<center><%= p.text_area :description %></center>
+						</p>
 
-    <div id="content">
+						<p><h2>Add listing:</h2></p>
+						<% if !@skill.blank? %>
+							<% for item in @skill %>
+								<center><%= item.id %>
+								<%= link_to item.name, listings_path(:project_id => @project.id, :skill_id => item.id)  %></center>
+								<br>
+							<% end %>
+						<% end %>
 
-        <!-- 1/4 + 1/2 + 1/4 length -->
-
-            <div class="box column-quarter-1">
-
-            </div>
-
-            <div class="box column-half-1">
-
- <!-- all content is found in this div -->
-
-            <div id="header">
-
-
-<%= form_for @project do |p| %>
-
-	<p>
-	<center><strong><%= p.label :name %></strong> <br></center>
-	<center><%= p.text_field :name %></center>
-	</p>
-
-	<p>
-	<center><strong><%= p.label :description %> </strong> <br></center>
-	<center><%= p.text_area :description %></center>
-	</p>
-
-	
-
-	<p><h2>Add listing:</h2></p>
-	<% if !@skill.blank? %>
-		<% for item in @skill %>
-			<center><%= item.id %>
-			<%= link_to item.name, listings_path(:project_id => @project.id, :skill_id => item.id)  %></center>
-			<br>
-		<% end %>
-	<% end %>
-
-	<p><center> Have a Skill you don't see here?
-		<%= link_to "Add one", new_skill_path %></center>
-
-	<p><center><%= p.submit %></center </p>
-
-<%end%>
-</div>
-<div class = "box column-quarter-4">
-</div>
-</body>
+						<p><center> Have a Skill you don't see here?
+							<%= link_to "Add one", new_skill_path %></center>
+						<p><center><%= p.submit %></center </p>
+					<%end%>
+				</div>
+	</body>
 
 <footer>
 

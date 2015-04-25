@@ -121,11 +121,21 @@ img {
     width: 25%;
     min-width: 10%;
     float: left;
-    background-color: #FFFFFF;
+    background-color: #000000;
+    display: hidden;
 }
 
 .column-quarter-4 {
     margin-right: 0%;
+}
+
+.column-quarter-2{
+    width: 25%;
+    height: 1000px;
+    min-width: 10%;
+    float: right;
+    display: hidden;
+
 }
 
 .column-two-thirds-1 {
