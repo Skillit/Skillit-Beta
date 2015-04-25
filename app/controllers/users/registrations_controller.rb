@@ -16,7 +16,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def edit
     @skill = Skill.all
 
-    @talents = Talent.where("user_id = ?", params[:user_id]) 
+    #@talents = Talent.where("user_id = ?", current_user.id)
+
+    @talents = Skill.joins('LEFT OUTER JOIN talents ON talents.skill_id = skills.id').where("user_id = ?", current_user.id)
+
+    #@talents = Skill.joins (:talents)
 
   end
 

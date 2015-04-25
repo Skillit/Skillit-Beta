@@ -41,6 +41,8 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
+  <br></br>
+
   <div class="field">
     <center><%= f.label :first_name %><br />
     <%= f.text_field :first_name %> </center> 
@@ -82,7 +84,7 @@
   <center>MY SKILLS:</center>
   <% if !@talents.blank? %>
     <% for item in @talents %>
-      <center><%= item.skill_id %></center>
+      <center><%= item.name %></center>
       <br>
     <% end %>
   <% end %>

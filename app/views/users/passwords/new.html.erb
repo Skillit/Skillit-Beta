@@ -1,16 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+<%= stylesheet_link_tag "projects" %>
+    <head>
+
+        <meta charset="UTF-8">
+        <link href="skillfish_layout.css" type="text/css" rel="stylesheet" />
+
+        <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />--!>
+=======
+        <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />-->
+
+        <title>Password: Skillit</title>
+
+    </head>
+
+
+
+    <body>
+        <!-- Header Section - - - - - - - - - - - - - - - - - - - -->
+
+    <%= render "layouts/navbar" %> 
+
+    <div id="content">
+
+        <!-- 1/4 + 1/2 + 1/4 length -->
+
+            <div class="box column-quarter-1">
+
+            </div>
+
+            <div class="box column-half-1">
+
+ <!-- all content is found in this div -->
+
+            <div id="header">
 <h2>Forgot your password?</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+   <center> <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %></center>
   </div>
 
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <center><%= f.submit "Send me reset password instructions" %></center>
   </div>
+  <br></br>
 <% end %>
 
-<%= render "users/shared/links" %>
+<center><%= render "users/shared/links" %></center>
+</div>
+<div class = "box column-quarter-4">
+</div>
+</body>
+</html>

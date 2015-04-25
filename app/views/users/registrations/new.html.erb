@@ -1,41 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+<%= stylesheet_link_tag "projects" %>
+    <head>
+
+        <meta charset="UTF-8">
+        <link href="skillfish_layout.css" type="text/css" rel="stylesheet" />
+
+        <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />--!>
+=======
+        <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />-->
+
+        <title>Setting: Skillit</title>
+
+    </head>
+
+
+
+    <body>
+        <!-- Header Section - - - - - - - - - - - - - - - - - - - -->
+
+    <%= render "layouts/navbar" %> 
+
+    <div id="content">
+
+        <!-- 1/4 + 1/2 + 1/4 length -->
+
+            <div class="box column-quarter-1">
+
+            </div>
+
+            <div class="box column-half-1">
+
+ <!-- all content is found in this div -->
+
+            <div id="header">
+
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
+  <br></br>
+
   <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %> 
+   <center> <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %> </center>
   </div>
 
 
   <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %> 
+    <center><%= f.label :last_name %><br />
+    <%= f.text_field :last_name %> </center>
   </div>
 
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <center><%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %></center>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+   <center> <%= f.label :password %>
     <% if @validatable %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off" %></center>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <center><%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %></center>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+    <center><%= f.submit "Sign up" %>
+  </div></center>
 <% end %>
-
-<%= render "users/shared/links" %>
+<br></br>
+<center><%= render "users/shared/links" %></center>
+</div>
+<div class = "box column-quarter-4">
+</div>
+</body>
+</html>

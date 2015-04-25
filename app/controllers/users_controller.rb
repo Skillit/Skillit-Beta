@@ -11,7 +11,8 @@ class UsersController < ApplicationController
 	def show
 		#@user = User.find(params[:id])
 		@user = User.find(current_user)
-		@talents = Talent.where("user_id = ?", current_user.id) 
+		@talents = Skill.joins('LEFT OUTER JOIN talents ON talents.skill_id = skills.id').where("user_id = ?", current_user.id)
+
 	end
 
 	#defines user_params which will be passed back and forth. Has parameters, name, about and email so far.

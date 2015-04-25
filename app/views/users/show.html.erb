@@ -60,19 +60,35 @@ function vouch2(val2) {
 <center>
 
  <!-- Skill Grid Section -->
+<br></br>
+  <center>MY SKILLS:</center>
+  <% if !@talents.blank? %>
+    <% for item in @talents %>
+      <center> <%= item.name %></center>
+      
+
+
+      
+    <% end %>
+  <% end %>
+
+
+      
+
+
     <section id="skillz">
                     <h2>skills</h2>
                     <hr>
 <table>
-<tr>
-<td>
-    <div class="box">    
-        <label for="qty"><abbr title="Quantity">Photoshop</abbr></label>
-        <input id="qty" value="0" />
+        <tr>
+        <td>
+        <div class="box">    
+            <label for="qty"><abbr title="Quantity">Photoshop</abbr></label>
+            <input id="qty" value="0" />
 
-        <button id="up" onclick="vouch(1)">Vouch</button>
-    </div>
-</td>
+            <button id="up" onclick="vouch(1)">Vouch</button>
+        </div>
+    </td>
 
 <td>
     <div class="box">    
@@ -92,14 +108,7 @@ function vouch2(val2) {
     </div>
 </td>
 
-<br></br>
-  <center>MY SKILLS:</center>
-  <% if !@talents.blank? %>
-    <% for item in @talents %>
-      <center><%= item.skill_id %></center>
-      <br>
-    <% end %>
-  <% end %>
+
 
 </tr>
 </table>
