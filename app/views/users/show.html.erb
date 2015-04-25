@@ -62,14 +62,21 @@ function vouch2(val2) {
  <!-- Skill Grid Section -->
 <br></br>
   <center>MY SKILLS:</center>
+
+<table>
+        <tr>
+
   <% if !@talents.blank? %>
     <% for item in @talents %>
-      <center> <%= item.name %></center>
-      
+        <td>
+        <div class="box">    
+            <%= item.name %> 
+        </div>
+    </td>
 
-
-      
     <% end %>
+
+    <tr>
   <% end %>
 
 
