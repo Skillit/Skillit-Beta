@@ -36,7 +36,7 @@
                             <li><%= link_to "Profile", current_user %></li>
                             <li><%= link_to 'New Project', new_project_path %></li>
                             <li><%= link_to "Settings", edit_user_registration_path%></li>
-                            <li><%= link_to 'Logout', destroy_user_session_path, :method => 'delete' %></li>
+                            <li><%= link_to 'Logout', destroy_user_session_path(:controller => :sessions, :action => 'destroy', :id => current_user.id) , :method => 'delete' %></li>
                         </ul> 
                     </div>
 

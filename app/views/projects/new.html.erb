@@ -32,56 +32,42 @@
 
                 <center><h1>Make New Project<h1></center>
 
-                <%= form_for @project do |p| %>
-                <br></br>
-
-            	<p>
-            	<center><strong><%= p.label :name %> <br></strong></center>
-            	<center><%= p.text_field :name %></center>
-            	</p>
-
-                <p>
-                <center><strong><%= p.label :description %> <br></strong></center>
-                <center><%= p.text_area :description %></center>
-                </p>
-
-            	<center><strong>Start project as <%= current_user.first_name %></p></center>
 
 
-            	<p>
+                <% if user_signed_in? %>
 
-                <!-- SKILLS ENTRY PARTIALIZE -->  
-            	<h2>Skills needed:</h2>
-                <br></br>
-                <center>MY SKILLS:</center>
-                 <% if !@listings.blank? %>
-                    <% for item in @listings %>
-                      <center><%= item.skill_id %></center>
-                      <br>
-                    <% end %>
-                  <% end %>
+                    <%= form_for @project do |p| %>
 
 
 
 
-                  <br></br>
-                  <center>ADD SKILLS:</center>
+                    <center><strong>Start project as <%= current_user.first_name %></strong></p></center>
 
-                  <% if !@skill.blank? %>
-                    <% for item in @skill %>
-                        <center><%= item.id %>
-                        <%= link_to item.name, listings_path(:project_id => @project.id, :skill_id => item.id)  %></center>
-                        <br>
-                    <% end %>
-                  <% end %>
+                    <center><p>Image upload using paperclip goes here</p></center>
 
+                	<p>
+                	<center><strong><%= p.label :name %> <br></strong></center>
+                	<center><%= p.text_field :name %></center>
+                	</p>
 
-            	</p>
+                    <p>
+                    <center><strong><%= p.label :description %> <br></strong></center>
+                    <center><%= p.text_area :description %></center>
+                    </p>
+                	
+                	
+                	<center><%= p.submit %> </center>
+                    <p>
+                    <%end%>
+                <%else %>
 
-            	
-            	<center><%= p.submit %> </center>
+                Please Log in to Create a new project:
+                <%= link_to 'LOG IN', new_user_session_path %>
 
-                <%end%>
+                <% end %>
+
+                    
+
             </div>
 
             <div class = "box column-quarter-4">

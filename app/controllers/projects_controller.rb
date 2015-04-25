@@ -8,6 +8,9 @@ class ProjectsController < ApplicationController
 	#This will lead to the view for a single project's page (VERY IMPORTANT)
 	def show
 		@project = Project.find(params[:id])
+
+		@listings = Skill.joins('LEFT OUTER JOIN listings ON listings.skill_id = skills.id').where("project_id = ?", params[:id])
+
 	end
 
 	#This will lead to the view for the New project page
@@ -21,7 +24,7 @@ class ProjectsController < ApplicationController
 		@project = Project.new(project_params)
 
 		if @project.save
-			redirect_to @project
+			redirect_to edit_project_path(@project)
 		else
 			render 'new'
 		end
@@ -32,9 +35,9 @@ class ProjectsController < ApplicationController
 		@project = Project.find(params[:id])
 		@skill = Skill.all
 
-		@projlistings = Listing.where("project_id = ?", params[:id])
-		#	@projlistings
-		#else
+		#@listings = Listing.where("project_id = ?", params[:id])
+		@listings = Skill.joins('LEFT OUTER JOIN listings ON listings.skill_id = skills.id').where("project_id = ?", params[:id])
+
 
 		#end
 

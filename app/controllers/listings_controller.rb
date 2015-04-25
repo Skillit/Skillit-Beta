@@ -5,7 +5,7 @@ class ListingsController < ApplicationController
 		@listing.project_id = params[:project_id]
 		@listing.skill_id = params[:skill_id]
 		@listing.save
-		redirect_to edit_project_path(params[:id]) 
+		redirect_to edit_project_path(@listing.project_id) 
 	end
 
 

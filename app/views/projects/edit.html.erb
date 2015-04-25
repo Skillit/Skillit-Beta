@@ -40,14 +40,36 @@
 						<center><%= p.text_area :description %></center>
 						</p>
 
-						<p><h2>Add listing:</h2></p>
-						<% if !@skill.blank? %>
-							<% for item in @skill %>
-								<center><%= item.id %>
-								<%= link_to item.name, listings_path(:project_id => @project.id, :skill_id => item.id)  %></center>
-								<br>
-							<% end %>
-						<% end %>
+						
+						<!-- SKILLS ENTRY PARTIALIZE -->  
+                	<h2>Skills needed:</h2>
+                    
+                    <center>Current listings:</center> <br>
+                     <% if !@listings.blank? %>
+                        <% for item in @listings %>
+                          <center><%= item.name %></center>
+                          <br>
+                        <% end %>
+                      <% end %>
+
+
+
+
+                      <br></br>
+                      <center>Add Listing:</center>
+
+                      <% if !@skill.blank? %>
+                        <% for item in @skill %>
+                            <center><%= item.id %>
+                            <%= link_to item.name, listings_path(:project_id => @project.id, :skill_id => item.id)  %></center>
+                            <br>
+                        <% end %>
+                      <% end %>
+
+
+                	</p>
+
+
 
 						<p><center> Have a Skill you don't see here?
 							<%= link_to "Add one", new_skill_path %></center>
