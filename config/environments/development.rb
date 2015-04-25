@@ -36,6 +36,9 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
+  #Development mode for Paperclip. I do not know what this does
+  Paperclip.options[:command_path] = "/usr/local/bin/"
+
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Raises error for missing translations
