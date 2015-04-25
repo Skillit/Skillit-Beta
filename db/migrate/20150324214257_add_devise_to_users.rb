@@ -19,6 +19,16 @@ class AddDeviseToUsers < ActiveRecord::Migration
       t.string   :current_sign_in_ip
       t.string   :last_sign_in_ip
 
+
+      ########Paperclip stuff
+      
+      #mark avatar as attachments, and paperclip
+      #will create the proper columns in the users table on migration
+      t.attachment :avatar
+      
+      t.timestamps
+      #######
+
       ## Confirmable
       # t.string   :confirmation_token
       # t.datetime :confirmed_at

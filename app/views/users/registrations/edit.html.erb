@@ -12,7 +12,7 @@
 =======
         <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />-->
 
-        <title>Setting: Skillit</title>
+        <title>Settings: Skillit</title>
 
     </head>
 
@@ -42,6 +42,16 @@
   <%= devise_error_messages! %>
 
   <br></br>
+
+
+  <div class="field">
+    <center>
+        Provide a URL for Your Avatar: <br />
+        <%= text_field_tag 'avatar_url' %>
+    </center> 
+  </div>
+
+  <br>
 
   <div class="field">
     <center><%= f.label :first_name %><br />
