@@ -28,6 +28,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def update
     
     if @user.update(configure_account_update_params)
+      @user.save
       redirect_to @user
     else
       render 'edit'
@@ -59,7 +60,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
    private
    def configure_account_update_params
      devise_parameter_sanitizer.for(:account_update) << :attribute
-     params.require(:user).permit(:first_name, :last_name, :about, :email)
+     params.require(:user).permit(:first_name, :last_name, :about, :email, :avatar)
    end
 
 

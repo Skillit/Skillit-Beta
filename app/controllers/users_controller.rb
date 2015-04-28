@@ -15,6 +15,14 @@ class UsersController < ApplicationController
 
 	end
 
+	def create
+	  	#create the user from specified user parameters
+	    @user = User.new(user_params)
+	    
+	    #pull the image from the specified url and set the user's avatar
+	    @user.avatar_from_url(params[:avatar_url])
+	end
+
 	#defines user_params which will be passed back and forth. Has parameters, name, about and email so far.
 	private
 		def user_params
