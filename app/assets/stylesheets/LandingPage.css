@@ -116,23 +116,23 @@ h3 {
 }
 
 a.action:link {
-    color: #FFFFFF;
+    color: #7cc576;
 	text-decoration: none;
 }
 
 /* visited link */
 a.action:visited {
-    color: #FFFFFF;
+    color: #7cc576;
 }
 
 /* mouse over link */
 a.action:hover {
-    color: #FFF;
+    color: #7cc576;
 }
 
 /* selected link */
 a.action:active {
-    color: #d5dde6;
+    color: #7cc576;
 }
 
 .Login {
