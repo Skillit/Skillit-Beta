@@ -46,7 +46,7 @@
 
         <div class="container">
 
-            <%= image_tag @user.avatar.url %>
+            <%= image_tag current_user.avatar.url(:medium) %>
 
             <div class="intro-text">
                 <span class="name"><%= @user.first_name %> <%= @user.last_name %></span>
