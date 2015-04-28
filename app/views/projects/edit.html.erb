@@ -60,8 +60,7 @@
 
                       <% if !@skill.blank? %>
                         <% for item in @skill %>
-                            <center><%= item.id %>
-                            <%= link_to item.name, listings_path(:project_id => @project.id, :skill_id => item.id)  %></center>
+                            <center><%= link_to item.name, listings_path(:project_id => @project.id, :skill_id => item.id)  %></center>
                             <br>
                         <% end %>
                       <% end %>

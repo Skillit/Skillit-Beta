@@ -38,7 +38,12 @@
                         <p>
                      <% if !@listings.blank? %>
                         <% for item in @listings %>
-                           - <%= item.name %>
+                            <% for skill in @skilllistings %>
+                                <% if skill.id == item.skill_id %>
+                                    -<%= link_to skill.name , edit_listing_path(:listing_id => item.id ) %>
+
+                                <% end %>
+                            <% end %>
                         <% end %>
                       <% end %></p>
                     </div>
@@ -63,6 +68,12 @@
                     <div id= "content_lower2">
                         <h1><u>Connected Members</u></h1>
                         <div id = "connectedMembers">
+                            <% if !@contributors.blank? %>
+                                <% for item in @contributors %>
+                                        <%= item.first_name %>
+                                        <%= item.last_name %>
+                                <% end %>
+                            <% end %>
                             <%=image_tag('SallyFreshademon.jpeg')%> 
                             <%=image_tag('SallyFreshademon.jpeg')%> 
                             <%=image_tag('SallyFreshademon.jpeg')%> 
@@ -78,7 +89,15 @@
                         <div id = "pageAdmin">
                             <%=image_tag('SallyFreshademon.jpeg')%>
 
-                            <h2>Sally Freshman</h2>
+                            <h2>
+                                <% if !@author.blank? %>
+                                
+                                        <%= item.first_name %>
+                                        <%= item.last_name %>
+                                
+                            <% end %>
+                                
+                            </h2>
                             <h3>Page Admin</h3>
                         </div>
                     </div>

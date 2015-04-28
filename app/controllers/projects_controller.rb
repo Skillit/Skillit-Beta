@@ -9,7 +9,12 @@ class ProjectsController < ApplicationController
 	def show
 		@project = Project.find(params[:id])
 
-		@listings = Skill.joins('LEFT OUTER JOIN listings ON listings.skill_id = skills.id').where("project_id = ?", params[:id])
+		@skilllistings = Skill.joins(:listings).where("project_id = ?", params[:id])
+		@listings = Listing.joins("LEFT OUTER JOIN skills ON skill_id = skills.id").where("project_id = ?", params[:id])
+		#@listings = Listing.joins(:skills).where("project_id = ?", params[:id])
+
+		@author = User.joins("LEFT OUTER JOIN projects ON projects.author_id = users.id").where("users.id = ? ", @project.author_id)
+		@contributors = User.joins(:listings).where("project_id = ?", params[:id])
 
 	end
 
@@ -22,9 +27,13 @@ class ProjectsController < ApplicationController
 	#This action will be performed when the user hits submit at New project. No view to go with.
 	def create
 		@project = Project.new(project_params)
+		@project.author_id = current_user.id
+		@project.status = true
 
 		if @project.save
+
 			redirect_to edit_project_path(@project)
+			#redirect_to listings_path(project_id: @project.id, user_id: current_user.id)
 		else
 			render 'new'
 		end
@@ -36,7 +45,12 @@ class ProjectsController < ApplicationController
 		@skill = Skill.all
 
 		#@listings = Listing.where("project_id = ?", params[:id])
-		@listings = Skill.joins('LEFT OUTER JOIN listings ON listings.skill_id = skills.id').where("project_id = ?", params[:id])
+		#@listings = Skill.joins('LEFT OUTER JOIN listings ON listings.skill_id = skills.id').where("project_id = ?", params[:id])
+
+		@listings = Skill.joins(:listings).where("project_id = ?", params[:id])
+
+		#@author = User.joins('LEFT OUTER JOIN listings ON listings.user_id = users.id').where("project_id = ?", params[:id])
+		#@contributors = User.joins(:listings).where("project_id = ?", params [:id])
 
 
 		#end

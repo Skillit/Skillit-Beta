@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     
     resources :skills 
 
-    resources :listings, only: [:index]
+    resources :listings, only: [:index, :edit]
     resources :talents, only: [:index]
 
     
