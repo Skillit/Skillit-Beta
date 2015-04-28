@@ -12,9 +12,13 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150426005513) do
 =======
 ActiveRecord::Schema.define(version: 20150425172756) do
+>>>>>>> Canon-picture-branch
+=======
+ActiveRecord::Schema.define(version: 20150428212022) do
 >>>>>>> Canon-picture-branch
 
   create_table "listings", force: :cascade do |t|

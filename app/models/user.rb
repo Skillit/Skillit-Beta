@@ -14,12 +14,14 @@ class User < ActiveRecord::Base
 
 	#specify that the avatar is a paperclip file attachment
 	#specify additional styles that you want to use in views or eslewhere
-	has_attached_file :avatar, :styles => {:thumb => "100x100>"}
+	has_attached_file :avatar, :styles => {
+		:medium => "200x200>",
+		:small => "150x150#",
+		:thumb => "100x100",
+		:default_url => "/assets/images/missing.png"
+	}
 
-	#pull the image from the remote url and assign it as the avatar
-	def avatar_from_url(url)
-		self.avatar = open(url)
-  	end
+  	validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 end
 
 
