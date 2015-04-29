@@ -31,15 +31,7 @@
                 return new_qty1;
             }
 
-<<<<<<< HEAD
-                    <%=image_tag('SallyFreshademon.jpeg')%>
-                    <div class="intro-text">
-                        <br></br>
-                        <span class="name"><%= @user.first_name %> <%= @user.last_name %></span>
-                        <hr>
-                        <p> <%=@user.about%> </p>
-                    </div>
-=======
+
             function vouch2(val2) {
                 var qty2 = document.getElementById('qty2').value;
                 var new_qty2 = parseInt(qty2,10) + val2;
@@ -47,8 +39,7 @@
                 if (new_qty2 < 0) {
                     new_qty2 = 0;
                 }
->>>>>>> Canon-picture-branch
-                
+               
                 document.getElementById('qty2').value = new_qty2;
                 return new_qty2;
             }
@@ -69,8 +60,6 @@
 <center>
 
  <!-- Skill Grid Section -->
-<br></br>
-  <center>MY SKILLS:</center>
 
 <table>
         <tr>
@@ -146,6 +135,18 @@
 
     <table>
     <tr>
+
+    <% if !@projects.blank? %>
+        <% for p in @projects %>
+            <td>
+                <%= link_to p.name, project_path(p.id) %>
+
+
+            </td>
+        <% end %>
+    <% end %>
+
+
     <td>               
      <div class="project-list">
 
@@ -154,6 +155,7 @@
              </a>
     </div>
     </td>
+
     <td>
      <div class="project-list">
             <a href="#" class="projects-link">

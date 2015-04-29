@@ -6,9 +6,11 @@ Rails.application.routes.draw do
     get 'welcome', to: 'home#landing'
   # Example resource route (maps HTTP verbs to controller actions automatically):
     devise_for :users, controllers: {sessions: 'users/sessions', registrations: 'users/registrations', passwords: 'users/passwords'}
-    resources :users, only: [:show, :index]
+    devise_scope :user do
+      get '/users/sign_out' => 'devise/sessions#destroy'
+    end
 
-
+    resources :users, only: [:show, :index, :delete]
 
     resources :projects
     

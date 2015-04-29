@@ -7,12 +7,11 @@ class UsersController < ApplicationController
 		@user = User.all
 	end
 
-	#This will lead to the view for a single users page (VERY IMPORTANT)
 	def show
 		#@user = User.find(params[:id])
 		@user = User.find(current_user)
 		@talents = Skill.joins('LEFT OUTER JOIN talents ON talents.skill_id = skills.id').where("user_id = ?", current_user.id)
-
+		@projects = Project.joins(:listings).where("user_id = ?", current_user.id)
 	end
 
 	def create

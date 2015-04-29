@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
 		@listings = Listing.joins("LEFT OUTER JOIN skills ON skill_id = skills.id").where("project_id = ?", params[:id])
 		#@listings = Listing.joins(:skills).where("project_id = ?", params[:id])
 
-		@author = User.joins("LEFT OUTER JOIN projects ON projects.author_id = users.id").where("users.id = ? ", @project.author_id)
+		@author = User.joins("LEFT OUTER JOIN projects ON projects.author_id = users.id").where("users.id = ? ", @project.author_id).take
 		@contributors = User.joins(:listings).where("project_id = ?", params[:id])
 
 	end
