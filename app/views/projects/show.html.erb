@@ -71,6 +71,7 @@
                         <div id = "connectedMembers">
                             <% if !@contributors.blank? %>
                                 <% for item in @contributors %>
+                                        <%= image_tag item.avatar.url(:thumb) %>
                                         <%= item.first_name %>
                                         <%= item.last_name %>
                                 <% end %>
@@ -88,17 +89,19 @@
                 <div class="box column-third-3">
                     <div id="content_upper2">
                         <div id = "pageAdmin">
-                            <%=image_tag('SallyFreshademon.jpeg')%>
+                            
 
-                            <h2>
-                                <% if !@author.blank? %>
-                                
-                                        <%= @author.first_name %>
-                                        <%= @author.last_name %>
-                                
+                            
+                            <% if !@author.blank? %>
+
+                            <%= image_tag @author.avatar.url(:medium) %>
+                                <h2>                               
+                                <%= @author.first_name %>
+                                <%= @author.last_name %>
+                                </h2>
                             <% end %>
                                 
-                            </h2>
+                            
                             <h3>Page Admin</h3>
                         </div>
                     </div>
@@ -112,9 +115,15 @@
                             <p>Share This Page</p>
                         </div>
 
-                        <div id = "button">
-                            <p><%= link_to "Edit This Page", edit_project_path(@project) %></p>
-                        </div>
+                        
+                        <% if current_user %> 
+                            <% if @project.author_id == current_user.id %>
+                                <div id = "button">
+                                <p><%= link_to "Edit This Page", edit_project_path(@project) %></p>
+                                </div>
+                            <% end %>
+                        <% end %>
+                        
                     </div>
                 </div>
             </div>

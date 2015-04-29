@@ -8,7 +8,7 @@
         <link href="skillfish_layout.css" type="text/css" rel="stylesheet" />
 
         <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />--!>
-=======
+
         <!--<link href="skillfish_layout.css" type="text/css" rel="stylesheet" />-->
 
         <title>Setting: Skillit</title>
@@ -42,6 +42,15 @@
   <%= devise_error_messages! %>
 
   <br></br>
+
+  <div class="field">
+    <center>
+        Profile Picture: 
+        <%= f.file_field :avatar %>
+    </center> 
+  </div>
+
+  <br>
 
   <div class="field">
    <center> <%= f.label :first_name %><br />
