@@ -5,13 +5,14 @@ class UsersController < ApplicationController
 	#This action will direct to the index view that may show a list of all users
 	def index
 		@user = User.all
+
 	end
 
 	def show
-		#@user = User.find(params[:id])
-		@user = User.find(current_user)
-		@talents = Skill.joins('LEFT OUTER JOIN talents ON talents.skill_id = skills.id').where("user_id = ?", current_user.id)
-		@projects = Project.joins(:listings).where("user_id = ?", current_user.id)
+		@user = User.find(params[:id])
+		#@user = User.find(current_user)
+		@talents = Skill.joins('LEFT OUTER JOIN talents ON talents.skill_id = skills.id').where("user_id = ?", params[:id])
+		@projects = Project.joins(:listings).where("user_id = ?", params[:id])
 	end
 
 	def create

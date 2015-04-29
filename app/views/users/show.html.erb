@@ -47,7 +47,7 @@
 
         <div class="container">
 
-            <%= image_tag current_user.avatar.url(:medium) %>
+            <%= image_tag @user.avatar.url(:medium) %>
 
             <div class="intro-text">
                 <span class="name"><%= @user.first_name %> <%= @user.last_name %></span>
@@ -57,34 +57,28 @@
         </div>
     </header>
 <body>
-<center>
+
 
  <!-- Skill Grid Section -->
-
-
-  
-
-
-      
-
-
+<center>
     <section id="skillz">
         <h2>skills</h2>
         <hr>
 <table>
     <% if !@talents.blank? %>
-    <% for item in @talents %>
-        <td>
-        <div class="box">    
-            <%= item.name %> 
-        </div>
-    </td>
+        <% for item in @talents %>
+            <td>
+            <div class="box">    
+                <%= item.name %> 
+            </div>
+        </td>
 
-    <% end %>
+        <% end %>
 
     <tr>
-  <% end %>
-        <!-- <tr>
+    <% end %>
+</table>
+<!-- <tr>
         <td>
         <div class="box">    
             <label for="qty"><abbr title="Quantity">Photoshop</abbr></label>
@@ -115,7 +109,7 @@
 
 
 </tr> -->
-</table>
+
 
     </section>
 
@@ -135,62 +129,15 @@
     <% if !@projects.blank? %>
         <% for p in @projects %>
             <td>
+                <img src="http://placehold.it/350x150" alt="">
                 <%= link_to p.name, project_path(p.id) %>
-
-
             </td>
         <% end %>
     <% end %>
 
 
-    <td>               
-     <div class="project-list">
-
-        <a href="#" class="projects-link">
-            <img src="http://placehold.it/350x150" alt="">
-             </a>
-    </div>
-    </td>
-
-    <td>
-     <div class="project-list">
-            <a href="#" class="projects-link">
-            <img src="http://placehold.it/350x150" alt="">
-            </a>
-    </div>
-    </td>
-    <td>
-       <div class="project-list">
-                    <a href="#" class="projects-link">
-                        <img src="http://placehold.it/350x150" alt="">
-                    </a>
-        </div> 
-    </td>
-    </tr>
-    <tr>
-    <td>
-    <div class="project-list">
-        <a href="#" class="projects-link">
-            <img src="http://placehold.it/350x150" alt="">
-        </a>
-    </div>
-    </td>
-    <td>
-
-<div class="project-list">
-    <a href="#" class="projects-link">
-        <img src="http://placehold.it/350x150" alt="">
-    </a>
-</div> 
-    </td>
-    <td>
-                        
-    <div class="project-list">
-        <a href="#" class="projects-link">
-        <img src="http://placehold.it/350x150" alt="">
-        </a>
-    </div>     
-    </td>
+    
+    
     </tr>
     </table>
     </section>
