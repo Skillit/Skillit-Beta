@@ -9,7 +9,6 @@ class SkillsController < ApplicationController
 
 	def projlink
 		@skill = Skill.find(params[:id])
-		
 
 		redirect_to edit_user_path(params[@skill.id])
 	end
