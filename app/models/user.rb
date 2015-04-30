@@ -22,6 +22,15 @@ class User < ActiveRecord::Base
 	}
 
   	validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
+  	def self.search(search)
+		if search
+			where("first_name LIKE ?", "%#{search}%")
+		else
+			all
+		end
+	end
+
 end
 
 

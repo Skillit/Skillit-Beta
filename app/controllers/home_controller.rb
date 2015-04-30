@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
 	def index
-		@project = Project.all
+		#@project = Project.all
 		@search
-		#@project = Project.order("created_at DESC") #ADD Created_at to projects
+		@project = Project.last(10) #ADD Created_at to projects
 		#landing page redirection code goes here
 
 		#@project = Project.search(params[:search])
@@ -14,6 +14,8 @@ class HomeController < ApplicationController
 
 	def search
 		@project = Project.search(params[:search])
+
+		@user = User.search(params[:search])
 
 	end
 end
