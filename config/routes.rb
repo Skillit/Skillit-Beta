@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   
   # You can have the root of your site routed with "root"
    root 'home#index'
-
     get 'welcome', to: 'home#landing'
+    get 'search', to: 'home#search'
+
   # Example resource route (maps HTTP verbs to controller actions automatically):
     devise_for :users, controllers: {sessions: 'users/sessions', registrations: 'users/registrations', passwords: 'users/passwords'}
     devise_scope :user do

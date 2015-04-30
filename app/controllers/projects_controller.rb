@@ -2,9 +2,9 @@ class ProjectsController < ApplicationController
 
 	#This action will direct to the index view that may show a list of all projects. May also be run in the homepage
 	def index
-		#@project = Project.all
+		@project = Project.all
 
-		@project = Project.search(params[:search])
+		
 
 	end
 

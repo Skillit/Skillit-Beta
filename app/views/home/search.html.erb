@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<%= stylesheet_link_tag "home" %>
+</head>
+<body>
+
+
+    <%= render "layouts/navbar" %>
+
+    <div class="container">
+
+		<div class="content">
+			<% @project.each do |p| %>
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="#">
+                        <br>
+                        <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <h3><%= link_to p.name, project_path(p) %></h3>
+                    <p><%= p.description %></p>
+                    
+                </div>
+            </div>
+            <!-- /.row -->
+            <hr>
+            <% end %>
+
+
+
+		</div>
+	</div>
+</body>
+<footer>
+
+    <%= render "layouts/footer" %>
+
+ </footer>
+</html>
