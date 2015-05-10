@@ -15,8 +15,8 @@ set -e
 USAGE="Usage: $0 <start|stop|restart|upgrade|rotate|force-stop>"
 
 # app settings
-USER="deploy"
-APP_NAME="appname"
+USER="root"
+APP_NAME="Skillit-Beta"
 APP_ROOT="/home/$USER/$APP_NAME"
 ENV="production"
 
